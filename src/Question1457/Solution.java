@@ -1,6 +1,6 @@
+package Question1457;
+
 /**
- * @author 胡霖翔
- * <p>
  * Definition for a binary tree node.
  * public class TreeNode {
  * int val;
@@ -14,39 +14,13 @@
  * this.right = right;
  * }
  * }
- * <p>
- * 解题关键：判断一个路径是否是伪回文路径就是看它路径上的值能不能重组成一个真正的回文路径
  */
-public class Question1457 {
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
+class Solution {
     public int pseudoPalindromicPaths(TreeNode root) {
         int[] count = new int[10];
         return calculate(root, count);
     }
 
-    /**
-     * @param root
-     * @param count
-     * @return 存在的伪回文路径数量
-     */
     public int calculate(TreeNode root, int[] count) {
         int res = 0;
         if (root == null) {
@@ -61,12 +35,10 @@ public class Question1457 {
             }
         } else {
             res = calculate(root.left, count) + calculate(root.right, count);
-
         }
         count[root.val]--;
         return res;
     }
-
 
     /**
      * 判断是否为伪回文串
@@ -86,27 +58,4 @@ public class Question1457 {
         }
         return mark <= 1;
     }
-
-    public static void main(String[] args) {
-        Question1457 question1457 = new Question1457();
-        Question1457.TreeNode t1 = question1457.new TreeNode();
-        t1.val = 2;
-        Question1457.TreeNode t2 = question1457.new TreeNode();
-        t2.val = 3;
-        t1.left = t2;
-        Question1457.TreeNode t3 = question1457.new TreeNode();
-        t3.val = 1;
-        t1.right = t3;
-        Question1457.TreeNode t4 = question1457.new TreeNode();
-        t4.val = 3;
-        t2.left = t4;
-        Question1457.TreeNode t5 = question1457.new TreeNode();
-        t5.val = 1;
-        t2.right = t5;
-        Question1457.TreeNode t7 = question1457.new TreeNode();
-        t7.val = 1;
-        t3.right = t7;
-        System.out.println(question1457.pseudoPalindromicPaths(t1));
-    }
-
 }
