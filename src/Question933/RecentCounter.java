@@ -36,7 +36,6 @@ public class RecentCounter {
      * 测试输入：[[],[642],[1849],[4921],[5936],[5957]] 预期结果：[null,1,2,1,2,3]
      */
     public static void main(String[] args) {
-        RecentCounter recentCounter = new RecentCounter();
         int[] tests = {642, 1849, 4921, 5936, 5957};
         RecentCounter recentCounter1 = new RecentCounter();
         for (int val : tests) {
