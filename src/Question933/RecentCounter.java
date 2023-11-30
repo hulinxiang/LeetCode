@@ -41,5 +41,7 @@ public class RecentCounter {
         for (int val : tests) {
             System.out.println(recentCounter1.ping(val));
         }
+        double f= 8.1;
+        System.out.println(f);
     }
 }
