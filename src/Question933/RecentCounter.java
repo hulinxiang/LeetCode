@@ -4,6 +4,7 @@ import java.util.*;
 
 /**
  * @author 胡霖翔
+ * 知识点：java中的队列是Queue
  * Your RecentCounter object will be instantiated and called as such:
  * RecentCounter obj = new RecentCounter();
  * int param_1 = obj.ping(t);
