@@ -8,7 +8,7 @@ public class Solution1 {
         int n = s.length();
         char[] arr = s.toCharArray();
         for (int i = 0; i < n; i += 2 * k) {
-            reverse(arr, i, Math.min(i + k, n) - 1);
+            reverse(arr, i, Math.min(n, i + k) - 1);
         }
         return new String(arr);
     }
