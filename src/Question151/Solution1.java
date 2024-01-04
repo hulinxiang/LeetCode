@@ -7,7 +7,7 @@ package Question151;
 public class Solution1 {
     public String reverseWords(String s) {
         //去掉s前后的空格
-        s=s.trim();
+        s = s.trim();
         StringBuilder ans = new StringBuilder();
         //倒着遍历
         int left, right;
@@ -15,31 +15,27 @@ public class Solution1 {
         //一开始right指向最后一个字母的位置
         right = s.length() - 1;
         //最后退出循环的时候就是i==0的时候，最后再把最后一个字母加上即可
-        for (int i = s.length() - 1; i > 0; i--) {
-            if (mark == 0) {
-                if (s.charAt(i) == ' ') {
-                    continue;
-                } else {
-                    right = i;
-                    mark = 1;
-                }
+        for (int i = s.length() - 1; i >= 0; i--) {
+            while (i >= 0 && s.charAt(i) == ' ') {
+                i--;
             }
-            if (s.charAt(i) == ' ') {
-                left = i + 1;
-                ans.append(s, left, right + 1).append(" ");
-                right = i;
-                mark = 0;
+            right = i;
+            while (i >= 0 && s.charAt(i) != ' ') {
+                i--;
             }
+            left = i;
+            if (left < 0) {
+                ans.append(" ").append(s, 0, right+1);
+                break;
+            }
+            ans.append(" ").append(s, left+1, right+1);
         }
-        String lastStr = s.substring(0, right + 1);
-        lastStr = lastStr.trim();
-        ans.append(lastStr);
-        return ans.toString();
+        return ans.toString().trim();
     }
 
     public static void main(String[] args) {
         String s = "  hello world  ";
         Solution1 solution1 = new Solution1();
-        System.out.println(solution1.reverseWords(s)+"11111");
+        System.out.println(solution1.reverseWords(s) + "11111");
     }
 }
