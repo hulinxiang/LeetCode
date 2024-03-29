@@ -1,6 +1,4 @@
-package Question322;
-
-import java.util.Arrays;
+package Dp.Question322;
 
 
 /**

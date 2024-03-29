@@ -1,4 +1,4 @@
-package Question322;
+package Dp.Question322;
 
 import java.util.Arrays;
 import java.util.PriorityQueue;
