@@ -1,4 +1,4 @@
-package dfs.Question331;
+package Tree.Question331;
 
 public class Solution {
     private int length=0;
