@@ -1,4 +1,4 @@
-package Question704;
+package BinarySearch.Question704;
 
 /**
  * 左闭右开
