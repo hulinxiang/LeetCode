@@ -1,4 +1,4 @@
-package PublicAncestor.Question1483;
+package Tree.Question1483;
 
 
 class TreeAncestor {
