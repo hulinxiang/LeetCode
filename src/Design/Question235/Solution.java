@@ -1,4 +1,4 @@
-package Question235;
+package Design.Question235;
 
 /**
  * Definition for a binary tree node.
