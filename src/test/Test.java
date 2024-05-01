@@ -27,8 +27,13 @@ public class Test {
         myInterface = () -> System.out.println(4444444);
         myInterface.speak();
 
-        TestInterface testInterface=(x, y)->x-y;
-        System.out.println(testInterface.cal(10,3));
+        TestInterface testInterface = (x, y) -> x - y;
+        System.out.println(testInterface.cal(10, 3));
+
+        String a = new String("abcdfhghgfshaifa");
+        String b = new String("abcdfhghgfshaifa");
+        System.out.println(a == b);
+        System.out.println(a.equals(b));
     }
 
 }
