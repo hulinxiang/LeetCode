@@ -19,6 +19,7 @@ public class Solution {
         for (int i = 0; i < n; i++) {
             Arrays.fill(vis, false);
             dfs(i, g, vis); //从i开始DFS
+            vis[i] = false; // ans[i] 不含 i
             for (int j = 0; j < n; j++) {
                 if (vis[j]) {
                     ans[i].add(j);
