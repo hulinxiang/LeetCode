@@ -5,6 +5,7 @@ import java.util.LinkedList;
 import java.util.Map;
 import java.util.Queue;
 
+
 public class Solution {
 
     public int minMalwareSpread(int[][] graph, int[] initial) {
@@ -41,6 +42,8 @@ public class Solution {
         }
         int ans = n + 1, ansRemoved = 0;
         for (int u : initial) {
+            //如果该感染节点所在的连通分量中有超过一个感染节点，那么removed==0，否则通过上面记录的连通分量的大小得到可以减少的感染数；
+            //这是因为这个连通分量中有不止一个感染节点，哪怕溢出了这一个，剩余的感染节点也会把剩下的节点全部都感染完
             int removed = (idToInitials.get(ids[u]) == 1 ? idToSize.get(ids[u]) : 0);
             if (removed > ansRemoved || (removed == ansRemoved && u < ans)) {
                 ans = u;
