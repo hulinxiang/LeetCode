@@ -1,4 +1,4 @@
-package Question4;
+package BinarySearch.Question4;
 
 
 /**

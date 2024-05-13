@@ -34,6 +34,7 @@ public class Test {
         String b = new String("abcdfhghgfshaifa");
         System.out.println(a == b);
         System.out.println(a.equals(b));
+
     }
 
 }
