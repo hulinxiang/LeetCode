@@ -5,6 +5,16 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class Solution {
+    /**
+     * 按照元素值从小到大计算，那么第 i 行的比 mat[i][j] 小的 f 值都算出来了，大于等于 mat[i][j] 的尚未计算，视作 0。
+     *
+     * 所以对于第 i 行，相当于取这一行的 f 值的最大值，作为转移来源的值，我们只需要知道这一行的最大 f 值是多少。因此，用一个长为 m 的数组 rowMax维护每一行的最大 f 值。
+     *
+     * 对于每一列，也同理，用一个长为 n 的数组 colMax 维护。
+     *
+     * @param mat mxn的数组
+     * @return 最长的严格递增路径的长度
+     */
     public int maxIncreasingCells(int[][] mat) {
         // 行数
         int m = mat.length;
