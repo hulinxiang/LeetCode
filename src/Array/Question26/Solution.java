@@ -1,4 +1,4 @@
-package Question26;
+package Array.Question26;
 
 /**
  * @author ºúÁØÏè

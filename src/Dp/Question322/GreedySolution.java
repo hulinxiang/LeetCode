@@ -1,6 +1,7 @@
 package Dp.Question322;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 /**
@@ -21,7 +22,7 @@ public class GreedySolution {
             return Arrays.stream(records).sum();
         }
         boolean[] ifFind = new boolean[1];
-        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>((a, b) -> Arrays.stream(a).sum() - Arrays.stream(b).sum());
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>(Comparator.comparingInt(a -> Arrays.stream(a).sum()));
         coinNumber(coins, coins.length - 1, amount, records, sum, ifFind, priorityQueue);
         if (!ifFind[0]) {
             return -1;
