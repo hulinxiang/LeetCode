@@ -1,4 +1,4 @@
-package Array.Question125;
+package SlidingWindow.Question125;
 
 public class Solution {
     public boolean isPalindrome(String s){

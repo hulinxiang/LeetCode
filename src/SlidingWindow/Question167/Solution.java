@@ -1,4 +1,4 @@
-package Array.Question167;
+package SlidingWindow.Question167;
 
 public class Solution {
     public int[] twoSum(int[] numbers, int target) {

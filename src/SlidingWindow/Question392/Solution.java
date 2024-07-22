@@ -1,4 +1,4 @@
-package Array.Question392;
+package SlidingWindow.Question392;
 
 import java.util.LinkedList;
 import java.util.Queue;
