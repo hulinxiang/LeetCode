@@ -1,4 +1,4 @@
-package SlidingWindow.Question125;
+package DoublePointer.Question125;
 
 public class Solution {
     public boolean isPalindrome(String s){

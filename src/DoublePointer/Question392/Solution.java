@@ -1,4 +1,4 @@
-package SlidingWindow.Question392;
+package DoublePointer.Question392;
 
 import java.util.LinkedList;
 import java.util.Queue;
