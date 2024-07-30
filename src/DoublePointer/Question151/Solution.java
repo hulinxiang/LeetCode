@@ -1,4 +1,4 @@
-package Question151;
+package DoublePointer.Question151;
 
 import java.util.Arrays;
 import java.util.Collections;

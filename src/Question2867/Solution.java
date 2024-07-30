@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author Hu
+ */
 public class Solution {
     //首先通过埃氏筛来判断一个数字是不是质数
     private static final int N = 100001;

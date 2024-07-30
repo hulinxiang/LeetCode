@@ -1,4 +1,4 @@
-package Question1969;
+package FastMod.Question1969;
 
 public class Solution {
     public int minNonZeroProduct(int p) {

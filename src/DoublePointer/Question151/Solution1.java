@@ -1,4 +1,4 @@
-package Question151;
+package DoublePointer.Question151;
 
 /**
  * @author 胡霖翔
