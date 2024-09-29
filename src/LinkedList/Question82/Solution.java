@@ -1,8 +1,6 @@
 package LinkedList.Question82;
 
 
-import java.util.HashMap;
-
 public class Solution {
 
     public class ListNode {
@@ -22,29 +20,20 @@ public class Solution {
         }
     }
 
-    HashMap<Integer, Integer> hashMap = new HashMap<>();
 
     public ListNode deleteDuplicates(ListNode head) {
-        ListNode p = head;
-        while (p != null) {
-            hashMap.put(p.val, hashMap.getOrDefault(p.val, 0) + 1);
-            p = p.next;
-        }
         ListNode dummy = new ListNode(0, head);
-        p = head;
-        ListNode pre = dummy;
-        while (p != null) {
-            if (hashMap.get(p.val) > 1) {
-                pre.next = p.next;
-                p = pre.next;
+        ListNode cur = dummy;
+        while (cur.next != null && cur.next.next != null) {
+            int val = cur.next.val;
+            if (cur.next.next.val == val) {
+                while (cur.next != null && cur.next.val == val) {
+                    cur.next = cur.next.next;
+                }
             } else {
-                pre = pre.next;
-                p = p.next;
+                cur = cur.next;
             }
         }
-
-
         return dummy.next;
-
     }
 }
