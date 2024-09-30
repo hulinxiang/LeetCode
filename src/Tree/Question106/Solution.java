@@ -1,4 +1,4 @@
-package Question106;
+package Tree.Question106;
 
 import java.util.HashMap;
 
