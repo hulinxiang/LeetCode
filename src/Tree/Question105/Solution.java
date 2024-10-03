@@ -27,6 +27,7 @@ class Solution {
         }
         HashMap<Integer, Integer> hashMap = new HashMap<>(inLen);
         for (int i = 0; i < inLen; i++) {
+            // 存放的这个节点的值和它在中序序列中的位置
             hashMap.put(inorder[i], i);
         }
         return buildTree(preorder, 0, preLen - 1, hashMap, 0, inLen - 1);
@@ -38,6 +39,7 @@ class Solution {
             return null;
         }
         int rootVal = preorder[preLeft];
+        // 通过中序序列的特性得到了根节点
         TreeNode treeNode = new TreeNode();
         treeNode.val = rootVal;
         int inRootPosition = hashMap.get(rootVal);
