@@ -1,4 +1,4 @@
-package Question98;
+package Tree.Question98;
 
 import java.util.ArrayList;
 import java.util.List;
