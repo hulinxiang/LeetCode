@@ -56,8 +56,8 @@ public class Solution {
 
     // 合并操作
     public void merge(int f, int to) {
-        f = find(f);
-        to = find(to);
+        f = find(f); //找到f的根节点
+        to = find(to); //找到to的根节点
         if (f != to) {
             fa[f] = to;
         }
